@@ -1,0 +1,79 @@
+form {
+  border: 1px solid #ccc;
+  border-radius: 1em;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  font-family: Helvetica, sans-serif;
+  height: 250px;
+
+  /* Center the form on the page */
+  margin: 0 auto;
+
+  /* Form outline */
+  padding: 1em;
+  width: 600px;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+li {
+  padding-right: 50px;
+  text-align: right;
+}
+
+#tiles {
+  color: black;
+  font-family: serif;
+  font-size: small;
+}
+#quantity {
+  text-align: right;
+}
+.button {
+  color: black;
+  padding-left: 500px;
+}
+.title {
+  font-size: large;
+  font-weight: bold;
+  text-align: center;
+}
+.text {
+  background: #555;
+  border-radius: 1em;
+  color: white;
+  font-size: small;
+  font-weight: lighter;
+  padding-bottom: 3px;
+  padding-top: 5px;
+  text-align: center;
+}
+.grid {
+  align-content: center;
+  display: grid;
+  grid-gap: 5px;
+  grid-template-columns: 200px 200px 200px;
+  justify-content: center;
+}
+
+h5 {
+  text-align: center;
+}
+
+button {
+  color: black;
+  font-size: large;
+  font-weight: light;
+  text-align: right;
+  transition-duration: 0.3s;
+}
+button:hover {
+  background-color: #555;
+  color: white;
+  font-size: large;
+  font-weight: light;
+  text-align: right;
+  transition-duration: 0.3s;
+}
