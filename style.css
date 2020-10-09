@@ -69,9 +69,11 @@ button {
   text-align: right;
   transition-duration: 0.3s;
 }
+button:focus,
 button:hover {
   background-color: #555;
   color: white;
+  cursor: pointer;
   font-size: large;
   font-weight: light;
   text-align: right;
