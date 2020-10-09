@@ -14,6 +14,62 @@
     <title>Document</title>
   </head>
   <body>
+    <form action="/rounddraw" method="post">
+      <ul>
+        <div class="text">
+          <label class="title">Round 1</label>
+          <p> Select how many of each tile was pulled from the bag.</p>
+        </div>
+       <div class="grid">
+         <h5>Military Tiles</h5>
+         <h5>Grid Tiles</h5>
+         <h5>Nano Tiles</h5>
+        </div>
+        <div class="grid">
+          <li>
+         <label id="tiles" for="Neutron Bomb">Neutron Bomb:</label>
+          <input type="number" id="quantity" name ="quantity" min="0" max="4">
+            </li>
+          <li>
+         <label id="tiles" for="Gauss Shield">Gauss Shield:</label>
+          <input type="number" id="quantity" name ="quantity" min="0" max="4">
+            </li>
+             <li>
+         <label id="tiles" for="Nanorobots">Nanorobots:</label>
+          <input type="number" id="quantity" name ="quantity" min="0" max="4">
+            </li>
+                  <li>
+         <label id="tiles" for="Starbase">Starbase:</label>
+          <input type="number" id="quantity" name ="quantity" min="0" max="4">
+            </li>
+          <li>
+         <label id="tiles" for="Improved Hull">Improved Hull:</label>
+          <input type="number" id="quantity" name ="quantity" min="0" max="4">
+            </li>
+                  <li>
+         <label id="tiles" for="Fusion Drive">Fusion Drive:</label>
+          <input type="number" id="quantity" name ="quantity" min="0" max="4">
+            </li>
+                  <li>
+         <label id="tiles" for="Plasma Cannon">Plasma Cannon:</label>
+          <input type="number" id="quantity" name ="quantity" min="0" max="4">
+            </li>
+                  <li>
+         <label id="tiles" for="Fusion Source">Fusion Source:</label>
+          <input type="number" id="quantity" name ="quantity" min="0" max="4">
+            </li>
+                  <li>
+         <label id="tiles" for="Advanced Robotics">Advanced Robotics:</label>
+          <input type="number" id="quantity" name ="quantity" min="0" max="4">
+            </li>
+        </div><br>
+     <div>
+        <li class = "button">
+          <button type="submit">Submit</button>
+        </li>
+     </div>
+      </ul>
+     </form>
     <!-- 'Connect' JS to this HTML file. -->
     <script src="./scripts.js"></script>
   </body>
