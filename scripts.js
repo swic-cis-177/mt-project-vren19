@@ -2,8 +2,9 @@
 const tileNumber = [12, 12, 12, 12, 12, 12, 12, 12, 12];
 const roundNumber = document.querySelector("title");
 const form = document.querySelector("form");
+
 let round = 1;
-while (round <= 8) {
+if (round <= 10) {
   form.addEventListener("submit", function () {
     //prevent default browser permission
     event.preventDefault();
