@@ -11,6 +11,7 @@ form.addEventListener("submit", function () {
   //action when submit button is clicked.
   if (round < 10) {
     const formData = {};
+    console.log("Beginning of Round " + round);
     for (let i = 0; i <= 8; i++) {
       //print amount of each tile pulled
       formData[event.target.elements[i].id] = event.target.elements[i];
@@ -18,7 +19,7 @@ form.addEventListener("submit", function () {
       console.log(
         "The number of " +
           event.target.elements[i].id +
-          "s pulled: " +
+          " tile(s) pulled: " +
           tilesPulled
       );
       //print the amount of each tile left
@@ -27,17 +28,29 @@ form.addEventListener("submit", function () {
       console.log(
         "The number of " +
           event.target.elements[i].id +
-          "s left: " +
+          " tile(s) left: " +
           tileNumber[i]
       );
     }
+    console.log("End of Round " + round);
+    //progress to next round
     round++;
     text = "Round " + round;
-    console.log(round);
     document.getElementById("round").innerHTML = text;
-  } else {
+    //reset values for inputs eventually get more efficient way to do this if it exists.
+    document.getElementById("neutronbomb").value = 0;
+    document.getElementById("gaussShield").value = 0;
+    document.getElementById("nanoRobots").value = 0;
+    document.getElementById("starbase").value = 0;
+    document.getElementById("improvedHull").value = 0;
+    document.getElementById("fusionDrive").value = 0;
+    document.getElementById("plasmaCannon").value = 0;
+    document.getElementById("fusionSource").value = 0;
+    document.getElementById("advancedRobotics").value = 0;
+  }
+  //End form submission when game is over
+  else {
     console.log("Game Over.");
     document.getElementById("round").innerHTML = "Game Over";
   }
-  //TODO: reset number boxes
 });
