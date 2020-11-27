@@ -4,72 +4,140 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/0.7.0/modern-normalize.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/0.7.0/modern-normalize.min.css"
+    />
 
     <!-- TODO: Add some Google Fonts -->
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
 
     <title>Eclipse Tile Tracking</title>
   </head>
   <body>
-    <form action="/rounddraw" method="post">
+    <form>
       <ul>
         <div class="text">
-          <label id = "round" class="title">Round 1</label>
-          <p> Select how many of each tile was pulled from the bag.</p>
+          <label id="round" class="title">Round 1</label>
+          <p>Select how many of each tile was pulled from the bag.</p>
         </div>
-       <div class="grid">
-         <h5>Military Tiles</h5>
-         <h5>Grid Tiles</h5>
-         <h5>Nano Tiles</h5>
+        <div class="grid">
+          <h2>Military Tiles</h2>
+          <h2>Grid Tiles</h2>
+          <h2>Nano Tiles</h2>
         </div>
         <div class="grid">
           <li>
-         <label id="tiles" for="Neutron Bomb">Neutron Bomb:</label>
-          <input type="number" id="neutronbomb" name ="quantity" min="0" max="4" value = "0">
-            </li>
+            <label id="tiles" for="neutronbomb">Neutron Bomb:</label>
+            <input
+              type="number"
+              id="neutronbomb"
+              name="quantity"
+              min="0"
+              max="4"
+              value="0"
+            />
+          </li>
           <li>
-         <label id="tiles" for="Gauss Shield">Gauss Shield:</label>
-          <input type="number" id="gaussShield" name ="quantity" min="0" max="4" value = "0">
-            </li>
-             <li>
-         <label id="tiles" for="Nanorobots">Nanorobots:</label>
-          <input type="number" id="nanoRobots" name ="quantity" min="0" max="4" value = "0">
-            </li>
-                  <li>
-         <label id="tiles" for="Starbase">Starbase:</label>
-          <input type="number" id="starbase" name ="quantity" min="0" max="4" value = "0">
-            </li>
+            <label id="tiles" for="gaussShield">Gauss Shield:</label>
+            <input
+              type="number"
+              id="gaussShield"
+              name="quantity"
+              min="0"
+              max="4"
+              value="0"
+            />
+          </li>
           <li>
-         <label id="tiles" for="Improved Hull">Improved Hull:</label>
-          <input type="number" id="improvedHull" name ="quantity" min="0" max="4" value = "0">
-            </li>
-                  <li>
-         <label id="tiles" for="Fusion Drive">Fusion Drive:</label>
-          <input type="number" id="fusionDrive" name ="quantity" min="0" max="4" value = "0">
-            </li>
-                  <li>
-         <label id="tiles" for="Plasma Cannon">Plasma Cannon:</label>
-          <input type="number" id="plasmaCannon" name ="quantity" min="0" max="4" value = "0">
-            </li>
-                  <li>
-         <label id="tiles" for="Fusion Source">Fusion Source:</label>
-          <input type="number" id="fusionSource" name ="quantity" min="0" max="4" value = "0">
-            </li>
-                  <li>
-         <label id="tiles" for="Advanced Robotics">Advanced Robotics:</label>
-          <input type="number" id="advancedRobotics" name ="quantity" min="0" max="4" value = "0">
-            </li>
-        </div><br>
-     <div>
-        <li class = "button">
-          <button type="submit">Submit</button>
-        </li>
-     </div>
+            <label id="tiles" for="nanoRobots">Nanorobots:</label>
+            <input
+              type="number"
+              id="nanoRobots"
+              name="quantity"
+              min="0"
+              max="4"
+              value="0"
+            />
+          </li>
+          <li>
+            <label id="tiles" for="starbase">Starbase:</label>
+            <input
+              type="number"
+              id="starbase"
+              name="quantity"
+              min="0"
+              max="4"
+              value="0"
+            />
+          </li>
+          <li>
+            <label id="tiles" for="improvedHull">Improved Hull:</label>
+            <input
+              type="number"
+              id="improvedHull"
+              name="quantity"
+              min="0"
+              max="4"
+              value="0"
+            />
+          </li>
+          <!-- TODO{victoria.taylor}: Fix all 'for' to match 'ids' -->
+          <li>
+            <label id="tiles" for="Fusion Drive">Fusion Drive:</label>
+            <input
+              type="number"
+              id="fusionDrive"
+              name="quantity"
+              min="0"
+              max="4"
+              value="0"
+            />
+          </li>
+          <li>
+            <label id="tiles" for="Plasma Cannon">Plasma Cannon:</label>
+            <input
+              type="number"
+              id="plasmaCannon"
+              name="quantity"
+              min="0"
+              max="4"
+              value="0"
+            />
+          </li>
+          <li>
+            <label id="tiles" for="Fusion Source">Fusion Source:</label>
+            <input
+              type="number"
+              id="fusionSource"
+              name="quantity"
+              min="0"
+              max="4"
+              value="0"
+            />
+          </li>
+          <li>
+            <label id="tiles" for="Advanced Robotics">Advanced Robotics:</label>
+            <input
+              type="number"
+              id="advancedRobotics"
+              name="quantity"
+              min="0"
+              max="4"
+              value="0"
+            />
+          </li>
+        </div>
+        <br />
+        <div>
+          <li class="button">
+            <button type="submit">Submit</button>
+          </li>
+        </div>
       </ul>
-     </form>
+    </form>
     <!-- 'Connect' JS to this HTML file. -->
-    <script src="./scripts.js"></script>
+    <script src="./scripts.js" type="module"></script>
   </body>
 </html>
