@@ -1,5 +1,7 @@
-//set starting number of each tile
-const tileNumber = [12, 12, 12, 12, 12, 12, 12, 12, 12];
+import { genNumberTiles } from "./lib.js";
+
+const tileNumbers = genNumberTiles();
+
 const roundNumber = document.querySelector("title");
 const form = document.querySelector("form");
 let round = 1;
@@ -23,13 +25,13 @@ form.addEventListener("submit", function () {
           tilesPulled
       );
       //print the amount of each tile left
-      tileNumber[i] = tileNumber[i] - tilesPulled;
+      tileNumbers[i] = tileNumbers[i] - tilesPulled;
 
       console.log(
         "The number of " +
           event.target.elements[i].id +
           " tile(s) left: " +
-          tileNumber[i]
+          tileNumbers[i]
       );
     }
     console.log("End of Round " + round);
