@@ -9,148 +9,149 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/0.7.0/modern-normalize.min.css"
     />
 
-    <!-- TODO: Add some Google Fonts -->
-
     <link rel="stylesheet" href="style.css" />
 
     <title>Eclipse Tile Tracking</title>
   </head>
   <body>
     <main>
-      <div class = "dataDisplay">
-          <h1>Tile Tracker</h1>
-          <table id="tileTable">
-            <thead>
-              <tr>
-                <td>Tile Name</td>
-                <td>Quantity in Bag</td>
-                <td>Quantity in Play</td>
-              </tr>
-            </thead>
-            <tbody>
-              <!-- Data will be 'injected' here using 'template' 👇🏽 -->
-            </tbody>
-          </table>
-    <form>
-      <div class = "formGrid">
-        <div class="text">
-        <label id="round" class="title">Round 1</label>
-        <p>Select how many of each tile was pulled from the bag.</p>
+      <div class="dataDisplay">
+        <h1>Tile Tracker</h1>
+        <table id="tileTable">
+          <thead>
+            <tr>
+              <td>Tile Name</td>
+              <td>Quantity in Bag</td>
+              <td>Quantity in Play</td>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Data will be 'injected' here using 'template' 👇🏽 -->
+          </tbody>
+        </table>
+
+        <form>
+          <div class="formGrid">
+            <div class="text">
+              <label id="round" class="title">Round 1</label>
+              <p>Select how many of each tile was pulled from the bag.</p>
+            </div>
+            <div class="gridTitles">Military Tiles</div>
+            <div class="gridTitles">Grid Tiles</div>
+            <div class="gridTitles">Nano Tiles</div>
+            <div>
+              <label class="tiles" for="neutronbomb">Neutron Bomb:</label>
+              <input
+                type="number"
+                id="neutronbomb"
+                name="quantity"
+                min="0"
+                max="4"
+                value="0"
+              />
+            </div>
+            <div>
+              <label class="tiles" for="gaussShield">Gauss Shield:</label>
+              <input
+                type="number"
+                id="gaussShield"
+                name="quantity"
+                min="0"
+                max="4"
+                value="0"
+              />
+            </div>
+            <div>
+              <label class="tiles" for="nanoRobots">Nanorobots:</label>
+              <input
+                type="number"
+                id="nanoRobots"
+                name="quantity"
+                min="0"
+                max="4"
+                value="0"
+              />
+            </div>
+            <div>
+              <label class="tiles" for="starbase">Starbase:</label>
+              <input
+                type="number"
+                id="starbase"
+                name="quantity"
+                min="0"
+                max="4"
+                value="0"
+              />
+            </div>
+            <div>
+              <label class="tiles" for="improvedHull">Improved Hull:</label>
+              <input
+                type="number"
+                id="improvedHull"
+                name="quantity"
+                min="0"
+                max="4"
+                value="0"
+              />
+            </div>
+            <div>
+              <label class="tiles" for="fusionDrive">Fusion Drive:</label>
+              <input
+                type="number"
+                id="fusionDrive"
+                name="quantity"
+                min="0"
+                max="4"
+                value="0"
+              />
+            </div>
+            <div>
+              <label class="tiles" for="plasmaCannon">Plasma Cannon:</label>
+              <input
+                type="number"
+                id="plasmaCannon"
+                name="quantity"
+                min="0"
+                max="4"
+                value="0"
+              />
+            </div>
+            <div>
+              <label class="tiles" for="fusionSource">Fusion Source:</label>
+              <input
+                type="number"
+                id="fusionSource"
+                name="quantity"
+                min="0"
+                max="4"
+                value="0"
+              />
+            </div>
+            <div>
+              <label class="tiles" for="advancedRobotics"
+                >Advanced Robotics:</label
+              >
+              <input
+                type="number"
+                id="advancedRobotics"
+                name="quantity"
+                min="0"
+                max="4"
+                value="0"
+              />
+            </div>
+            <button type="submit">Submit</button>
+          </div>
+        </form>
       </div>
-        <div class = "gridTitles">Military Tiles</div>
-        <div class = "gridTitles">Grid Tiles</div>
-        <div class = "gridTitles">Nano Tiles</div>
-        <div>
-          <label class="tiles" for="neutronbomb">Neutron Bomb:</label>
-          <input
-            type="number"
-            id="neutronbomb"
-            name="quantity"
-            min="0"
-            max="4"
-            value="0"
-          />
-        </div>
-        <div>
-          <label class="tiles" for="gaussShield">Gauss Shield:</label>
-          <input
-            type="number"
-            id="gaussShield"
-            name="quantity"
-            min="0"
-            max="4"
-            value="0"
-          />
-        </div>
-        <div>
-          <label class="tiles" for="nanoRobots">Nanorobots:</label>
-          <input
-            type="number"
-            id="nanoRobots"
-            name="quantity"
-            min="0"
-            max="4"
-            value="0"
-          />
-        </div>
-        <div>
-          <label class="tiles" for="starbase">Starbase:</label>
-          <input
-            type="number"
-            id="starbase"
-            name="quantity"
-            min="0"
-            max="4"
-            value="0"
-          />
-        </div>
-        <div>
-          <label class="tiles" for="improvedHull">Improved Hull:</label>
-          <input
-            type="number"
-            id="improvedHull"
-            name="quantity"
-            min="0"
-            max="4"
-            value="0"
-          />
-        </div>
-        <div>
-          <label class="tiles" for="fusionDrive">Fusion Drive:</label>
-          <input
-            type="number"
-            id="fusionDrive"
-            name="quantity"
-            min="0"
-            max="4"
-            value="0"
-          />
-        </div>
-        <div>
-          <label class="tiles" for="plasmaCannon">Plasma Cannon:</label>
-          <input
-            type="number"
-            id="plasmaCannon"
-            name="quantity"
-            min="0"
-            max="4"
-            value="0"
-          />
-        </div>
-        <div>
-          <label class="tiles" for="fusionSource">Fusion Source:</label>
-          <input
-            type="number"
-            id="fusionSource"
-            name="quantity"
-            min="0"
-            max="4"
-            value="0"
-          />
-        </div>
-        <div>
-          <label class="tiles" for="advancedRobotics">Advanced Robotics:</label>
-          <input
-            type="number"
-            id="advancedRobotics"
-            name="quantity"
-            min="0"
-            max="4"
-            value="0"
-          />
-        </div>
-          <button type="submit">Submit</button>
-      </div>
-    </form>
-    </div>
-</main>
-<template id="student-row">
-  <tr>
-    <td></td>
-    <td></td>
-    <td></td>
-  </tr>
-</template>
+    </main>
+    <template id="student-row">
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+    </template>
     <!-- 'Connect' JS to this HTML file. -->
     <script src="./scripts.js" type="module"></script>
   </body>
