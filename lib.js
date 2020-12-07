@@ -23,8 +23,7 @@ export const createTileTable = (tilesData) => {
 
 //TODO COUNT ROUNDS, PULL ARRAY
 //Form submission
-export const formSubmitted = () => {
-  //action when submit button is clicked.
+export const handleSubmit = () => {
   //action when submit button is clicked.
   if (round < 10) {
     const formData = {};
