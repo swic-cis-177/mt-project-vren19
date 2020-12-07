@@ -11,20 +11,9 @@ form {
   /* Form outline */
   padding: 1em;
   width: minmax(600px, auto);
-  width: 600px;
 }
 
-ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-li {
-  padding-right: 2em;
-  text-align: right;
-}
-
-#tiles {
+.tiles {
   color: black;
   font-family: serif;
   font-size: small;
@@ -47,20 +36,9 @@ li {
   color: white;
   font-size: small;
   font-weight: lighter;
-  padding-bottom: 3px;
-  padding-top: 5px;
-  text-align: center;
-}
-.gridForm {
-  align-content: stretch;
-  display: grid;
-  grid-auto-rows: minmax(10px, auto);
-  grid-gap: 1em;
-  grid-template-columns: repeat(3, 1fr);
-  justify-content: stretch;
-}
-
-h5 {
+  grid-column: 1/4;
+  justify-self: stretch;
+  padding: 5px;
   text-align: center;
 }
 
@@ -68,7 +46,8 @@ button {
   color: black;
   font-size: large;
   font-weight: light;
-  text-align: right;
+  grid-column: 2/3;
+  text-align: center;
   transition-duration: 0.3s;
 }
 button:hover {
@@ -76,15 +55,25 @@ button:hover {
   color: white;
   font-size: large;
   font-weight: light;
-  text-align: right;
+  text-align: center;
   transition-duration: 0.3s;
 }
 .dataDisplay {
   display: grid;
   grid-gap: 1em;
-  grid-template-columns: 3fr 1fr;
+  grid-template-columns: 1fr 1fr;
   margin: 1em;
 }
+
+/* set up grid */
+.formGrid {
+  display: grid;
+  grid-auto-rows: minmax(10px, auto);
+  grid-gap: 1em;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: right;
+}
+
 table {
   border-collapse: collapse;
   margin-bottom: 0.5rem;
@@ -98,4 +87,13 @@ td {
 
 td:nth-child(3) {
   text-align: center;
+}
+h1 {
+  grid-column: 1/4;
+  text-align: center;
+}
+
+.gridTitles {
+  font-weight: bold;
+  justify-self: center;
 }
