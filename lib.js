@@ -1,24 +1,23 @@
-import tilesData from "./data.js";
 const tbody = document.querySelector("tbody");
 const template = document.querySelector("template");
 let round = 1;
 let text = "Round 1";
 
-// TODO: GET TABLE TO SHOW
-export const createTileTable = (data) => {
+export const createTileTable = (tilesData) => {
   // clear existing table
-  tbody.innerHTML = null;
+  //tbody.innerHTML = null;
   // destructure each key in the array
-  data.forEach(({ name, bag, board }) => {
+  tilesData.forEach(({ tile, bag, board }) => {
     // clone the template row (tr)
     const newTileRow = template.content.cloneNode(true);
 
     // 3 tds in each row
     const newTileTD = newTileRow.querySelectorAll("td");
 
-    newTileTD[0].textContent = name;
+    newTileTD[0].textContent = tile;
     newTileTD[1].textContent = bag;
     newTileTD[2].textContent = board;
+    tbody.appendChild(newTileRow);
   });
 };
 
@@ -42,10 +41,7 @@ export const formSubmitted = () => {
       );
 
       console.log(
-        "The number of " +
-          event.target.elements[i].id +
-          " tile(s) left: " +
-          tilesData.bag.values([i])
+        "The number of " + event.target.elements[i].id + " tile(s) left: "
       );
     }
     console.log("End of Round " + round);
