@@ -97,3 +97,8 @@ h1 {
   font-weight: bold;
   justify-self: center;
 }
+thead {
+  color: maroon;
+  font-size: large;
+  font-weight: bold;
+}
