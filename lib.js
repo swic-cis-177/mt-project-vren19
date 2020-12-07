@@ -28,6 +28,12 @@ export const handleSubmit = () => {
   if (round < 10) {
     const formData = {};
     console.log("Beginning of Round " + round);
+
+    /**
+     * TODO{victoria}: Replace this with a fxn. to handle submission
+     * You could use 'name' attributes in HTML with 'FormData'
+     * https://dev.to/codefinity/handling-form-submissions-ii-35d5
+     */
     for (let i = 0; i <= 8; i++) {
       //print amount of each tile pulled
       formData[event.target.elements[i].id] = event.target.elements[i];
@@ -47,6 +53,12 @@ export const handleSubmit = () => {
     //progress to next round
     round++;
     text = "Round " + round;
+
+    /**
+     * TODO{victoria}: Move this to another fxn. 👆🏾 that will handle the reset
+     * in a less imperative way.
+     * You could just do `forEach` after `querySelectorAll`
+     */
     document.getElementById("round").innerHTML = text;
     //reset values for inputs eventually get more efficient way to do this if it exists.
     document.getElementById("neutronbomb").value = 0;
