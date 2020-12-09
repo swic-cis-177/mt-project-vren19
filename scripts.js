@@ -1,5 +1,5 @@
 import data from "./data.js";
-import { createTileTable, handleSubmit } from "./lib.js";
+import { createTileTable, endOfRound } from "./lib.js";
 //create tile table to replace console log
 createTileTable(data);
 
@@ -9,5 +9,5 @@ form.addEventListener("submit", function () {
   //prevent default browser permission
   event.preventDefault();
   //action when submit button is clicked.
-  handleSubmit();
+  endOfRound();
 });
