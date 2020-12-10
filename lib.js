@@ -1,10 +1,12 @@
 const tbody = document.querySelector("tbody");
 const template = document.querySelector("template");
+export let round = 1;
+export let updatedData = [];
 
-export const updateData = (piecesInfo, originalData) => {
+export const updateDataRound1 = (piecesInfo, originalData) => {
   // Map over data and 'match' the 'id' with the 'name' from the 'form data'
   // Converts the object to string
-  const updatedData = originalData.map((d) => {
+  updatedData = originalData.map((d) => {
     const ret = JSON.parse(JSON.stringify(d));
 
     const updateNumber = Number(piecesInfo[ret.id]);
@@ -12,12 +14,24 @@ export const updateData = (piecesInfo, originalData) => {
     ret.board = ret.board + updateNumber;
     console.log(piecesInfo, updateNumber, piecesInfo[ret.id]);
     return ret;
-
-    // const updateNumbers = d.find(({id}) => id === d.id)
-    // console.log(updateNumbers);
   });
 
-  console.log(updatedData);
+  // update table
+  createTileTable(updatedData);
+};
+
+export const updateDataRound2 = (piecesInfo, newData) => {
+  updatedData = newData.map((d) => {
+    const ret = JSON.parse(JSON.stringify(d));
+
+    const updateNumber = Number(piecesInfo[ret.id]);
+    ret.bag = ret.bag - updateNumber;
+    ret.board = ret.board + updateNumber;
+    console.log(piecesInfo, updateNumber, piecesInfo[ret.id]);
+    return ret;
+  });
+  // update table
+  createTileTable(updatedData);
 };
 
 export const updatePieces = (form) => Object.fromEntries(new FormData(form));
@@ -42,4 +56,24 @@ export const createTileTable = (tilesData) => {
     newTileTD[2].textContent = board;
     tbody.appendChild(newTileRow);
   });
+};
+
+//progress to next round
+const roundNumber = () => {
+  round++;
+  document.getElementById("round").innerHTML = "Round " + round;
+};
+
+//Form submitted to signal end of round
+export const adjustRoundNumber = () => {
+  //action when submit button is clicked.
+  if (round < 10) {
+    document.getElementById("myForm").reset();
+    roundNumber();
+  }
+  //End form submission when game is over
+  else {
+    console.log("Game Over.");
+    document.getElementById("round").innerHTML = "Game Over";
+  }
 };
