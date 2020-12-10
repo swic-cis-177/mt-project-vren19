@@ -1,10 +1,17 @@
 import data from "./data.js";
-import { createTileTable, updateData, updatePieces } from "./lib.js";
+import {
+  round,
+  createTileTable,
+  updateDataRound1,
+  updatePieces,
+  adjustRoundNumber,
+  updateDataRound2,
+  updatedData,
+} from "./lib.js";
 //create tile table to replace console log
 createTileTable(data);
 
 const form = document.querySelector("form");
-//if (1<=round<=10) {
 form.addEventListener(
   "submit",
 
@@ -17,8 +24,14 @@ form.addEventListener(
     const updatedPieces = updatePieces(event.target);
 
     // TODO: Use the 'updatedPieces' info to perform calculations on our new dataset.
-    updateData(updatedPieces, data);
-
-    // TODO: Add a 'render' to show 'updatedPieces'
+    if (round === 1) {
+      // Round 1
+      updateDataRound1(updatedPieces, data);
+      adjustRoundNumber();
+    } else {
+      // Rounds 2-10
+      updateDataRound2(updatedPieces, updatedData);
+      adjustRoundNumber();
+    }
   }
 );
